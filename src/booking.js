@@ -163,7 +163,7 @@ function Booking() {
       return;
     }
 
-    // ตรวจสอบเบอร์โทรศัพท์
+    // ตรวจสอบเบอร์โทรศัพท์ แบบไทย
     if (!/^0\d{9}$/.test(formData.phone)) {
       Swal.fire({
         icon: "warning",
