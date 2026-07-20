@@ -1,0 +1,43 @@
+/* Carwash\src\Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+    background: #fff;
+}
+
+.logo {
+    margin: 0;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Shine & */
+.logo-black {
+    color: #000;
+}
+
+/* Drive */
+.logo-orange {
+    color: #ff8c09;  
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff8c09;  
+}

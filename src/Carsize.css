@@ -1,0 +1,131 @@
+.Carsize {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.Carsize h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* การ์ดแต่ละขนาดรถ */
+.size-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: #fff;
+
+    padding: 30px;
+    margin-bottom: 35px;
+
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.size-section:hover{
+    transform: translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+/* รูป */
+.piccarsize{
+    width: 48%;
+    height: 360px;
+
+    object-fit:cover;
+    border-radius:15px;
+    flex-shrink:0;
+}
+
+.size-content{
+    width: 52%;
+}
+
+/* ฝั่งข้อความ */
+.size-section h2{
+    margin-bottom:18px;
+    font-size:30px;
+    font-weight:bold;
+    color:#000000;
+}
+
+.size-section p{
+    font-weight:bold;
+    font-size:30px;
+
+    margin:15px 0 8px;
+}
+
+.size-section ul{
+    padding-left:22px;
+    margin-bottom:25px;
+}
+
+.size-section li{
+    margin-bottom:8px;
+    font-size:20px;
+    color:#555555;
+}
+
+/* ปุ่ม */
+
+.carbutton{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:45%;
+    max-width:320px;
+    min-width:240px;
+    height:52px;
+
+    border:none;
+    border-radius:10px;
+
+    background:orange;
+    color:#fff;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.carbutton:hover{
+    background:#db7a0a;
+}
+
+/* Responsive */
+@media(max-width:850px){
+
+    .size-section{
+
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .piccarsize{
+
+        width:100%;
+        max-width:450px;
+        height:260px;
+    }
+
+    .size-section ul{
+
+        text-align:left;
+    }
+
+    .carbutton{
+
+        margin:auto;
+    }
+
+}

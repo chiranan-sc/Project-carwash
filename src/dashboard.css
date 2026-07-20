@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  min-height: 100vh;
+  background: #f4f6f9;
+  padding: 30px;
+}
+
+.dashboard h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.dashboard p {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+/* ตาราง */
+.dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard thead {
+  background: #ff9800;
+  color: white;
+}
+
+.dashboard th,
+.dashboard td {
+  padding: 14px 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard tbody tr:hover {
+  background: #fff8ef;
+  transition: 0.3s;
+}
+
+.dashboard tbody tr td {
+  background: white !important;
+  transition: 0.3s;
+}
+
+.dashboard tbody tr:hover td {
+  background: #fff8ef !important;
+}
+
+/* ปุ่ม */
+.dashboard button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* แก้ไข */
+.edit {
+  background: #e6be1e;
+  color: white;
+}
+
+.edit:hover {
+  background:  #de971e;
+}
+
+/* ยืนยัน */
+.confirm {
+  background: #4caf50;
+  color: white;
+}
+
+.confirm:hover:not(:disabled) {
+  background: #388e3c;
+}
+
+/* สถานะ Complete และ Cancel */
+.confirm:disabled,
+.confirm.confirmed {
+  background: #9e9e9e !important;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* ยกเลิก */
+.delete {
+  background: #f34c40;
+  color: white;
+}
+
+.delete:hover {
+  background: #d32f2f;
+}
+
+.delete:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+}
+
+/* สถานะ */
+.dashboard td:nth-child(9) {
+  font-weight: bold;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.status.ongoing {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.complete {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.cancel {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .dashboard {
+    overflow-x: auto;
+  }
+
+  .dashboard table {
+    min-width: 1200px;
+  }
+}

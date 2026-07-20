@@ -1,0 +1,153 @@
+.loginform{
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: #f8f8f8;
+}
+
+.formlogininfo{
+    width: 100%;
+    max-width: 500px;
+
+    background: #fff;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,.12);
+}
+
+.formlogininfo h1{
+    text-align: center;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    color: #000;
+
+    margin-bottom: 35px;
+}
+
+/* ช่องกรอก */
+
+.usernameform,
+.passwordform{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 22px;
+}
+
+.usernameform label,
+.passwordform label{
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #000;
+
+    margin-bottom: 8px;
+}
+
+.usernameform input,
+.passwordform input{
+    width: 100%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    font-size: 17px;
+
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+.usernameform input:focus,
+.passwordform input:focus{
+    border-color: orange;
+    box-shadow: 0 0 8px rgba(255,165,0,.25);
+}
+
+/* ข้อความ Error */
+
+.error{
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #dc3545;
+}
+
+/* ปุ่ม */
+
+.loginsubmit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45%;
+    max-width: 320px;
+    min-width: 240px;
+    height: 52px;
+
+    margin: 30px auto 0;
+
+    border: none;
+    border-radius: 10px;
+
+    background: orange;
+    color: #fff;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.loginsubmit:hover{
+    background: #db7a0a;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .formlogininfo{
+        width: 95%;
+        padding: 25px;
+    }
+
+    .formlogininfo h1{
+        font-size: 32px;
+    }
+
+    .usernameform label,
+    .passwordform label{
+        font-size: 18px;
+    }
+
+    .usernameform input,
+    .passwordform input{
+        height: 48px;
+    }
+
+    .loginsubmit{
+        width: 100%;
+        min-width: unset;
+    }
+}

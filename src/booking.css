@@ -1,0 +1,282 @@
+.booking-form {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+
+    background: #fff;
+
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.12);
+}
+
+
+/* หัวข้อ */
+.booking-form h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 35px;
+}
+
+/* ฟอร์ม */
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* label */
+.booking-form label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+/* input */
+.booking-form input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 15px;
+    font-size: 17px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+.booking-form input:focus {
+    border-color: orange;
+    box-shadow: 0 0 8px rgba(255,165,0,.25);
+}
+
+/* readonly */
+.booking-form input[readonly] {
+    background: #f5f5f5;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* =====================
+   DATE PICKER
+===================== */
+.datetime-group {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+
+.datepicker-wrapper {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.react-datepicker__input-container {
+    width: 100%;
+}
+
+.react-datepicker-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 45px 0 15px;
+    font-size: 17px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* calendar selected */
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+    background-color: orange !important;
+    color:white !important;
+    border-radius:8px;
+}
+
+.react-datepicker__day:hover {
+    background-color:#ffd699 !important;
+    border-radius:8px;
+}
+
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--keyboard-selected {
+
+    background-color:orange !important;
+    color:white !important;
+}
+
+.react-datepicker__month-text:hover,
+.react-datepicker__year-text:hover {
+    background:#ffd699 !important;
+}
+
+/* =====================
+   REACT SELECT TIME
+===================== */
+.time-select {
+    flex:1;
+    min-width:0;
+}
+
+.time-select > div {
+    width:100%;
+}
+
+.time-select .react-select__control {
+    width:100%;
+    min-height:50px;
+    height:50px;
+
+    border:1px solid #d9d9d9;
+    border-radius:10px;
+
+    font-size:17px;
+    box-shadow:none;
+
+}
+
+.time-select .react-select__control:hover {
+    border-color:#d9d9d9;
+}
+
+.time-select .react-select__value-container {
+    padding-left:15px;
+    overflow:hidden;
+}
+
+.time-select .react-select__single-value {
+    color:#333;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.time-select .react-select__placeholder {
+    color:#999;
+}
+
+.react-select__control--is-focused {
+    border-color:orange !important;
+    box-shadow:0 0 8px rgba(255,165,0,.25) !important;
+}
+
+
+/* option */
+.react-select__option--is-selected {
+    background:orange !important;
+    color:white !important;
+}
+
+.react-select__option--is-focused {
+    background:#ffd699 !important;
+    color:#000 !important;
+}
+
+.react-select__indicator-separator {
+    display: none;
+}
+
+/* =====================
+   PRICE
+===================== */
+.total-price {
+    margin-top:30px;
+    padding:18px;
+
+    background:#fff8ef;
+    border-left:6px solid orange;
+    border-radius:10px;
+
+    font-size:24px;
+    font-weight:bold;
+    color:#333;
+}
+
+/* =====================
+   BUTTON
+===================== */
+.booking-form form > button {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:45%;
+    max-width:320px;
+    min-width:240px;
+
+    height:52px;
+    margin:35px auto 0;
+
+    border:none;
+    border-radius:10px;
+
+    background:orange;
+    color:white;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.booking-form form > button:hover {
+    background:#db7a0a;
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+
+@media(max-width:768px){
+    .booking-form {
+        width:95%;
+        padding:25px;
+    }
+
+    .booking-form h1 {
+        font-size:32px;
+    }
+
+    .booking-form label {
+        font-size:18px;
+    }
+
+    .datetime-group {
+        flex-direction:column;
+    }
+
+    .booking-form form > button {
+        width:100%;
+        min-width:unset;
+    }
+
+    .total-price {
+        font-size:20px;
+    }
+}

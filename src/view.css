@@ -1,0 +1,133 @@
+/* =========================
+   View Booking
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.view {
+    min-height: 100vh;
+    background: #f4f6f9;
+    padding: 30px;
+}
+
+.view h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 2rem;
+}
+
+/* =========================
+   Table
+========================= */
+table {
+    table-layout: fixed;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.view table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.dashboard th,
+.dashboard td,
+.view th,
+.view td {
+    width: calc(100% / 10);
+    word-break: break-word;
+}
+
+.view thead {
+    background: #ff9800;
+}
+
+.view th {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Body */
+
+.view td {
+    padding: 15px 12px;
+    text-align: center;
+    color: #333;
+    font-size: 15px;
+    border-bottom: 1px solid #eeeeee;
+    background: white;
+}
+
+.view tbody tr td {
+    background: white;
+    transition: 0.3s;
+}
+
+.view tbody tr:hover td {
+    background: #fff8ef;
+}
+
+/* ลบเส้นแถวสุดท้าย */
+
+.view tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================
+   Error Message
+========================= */
+
+.error-message {
+    text-align: center;
+    color: #f44336;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1200px) {
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .view table {
+        min-width: 1200px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .view {
+        padding: 15px;
+    }
+
+    .view h1 {
+        font-size: 26px;
+    }
+
+    .view table {
+        min-width: 1000px;
+    }
+}

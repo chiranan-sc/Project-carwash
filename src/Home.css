@@ -1,0 +1,261 @@
+/* =========================
+   Home
+========================= */
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* กล่องรวมโปรโมชั่น */
+.promote-inner {
+    width: min(1200px, 90%);
+    margin: 50px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* การ์ดโปรโมชั่น */
+.promote-caption {
+    width: 900px;      /* หรือ 900px */
+    max-width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.promote-caption:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+}
+
+/* รูปโปรโมชั่น */
+.promote-caption img {
+    display: block;
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* หัวข้อโปรโมชั่น */
+.promote-caption h2 {
+    margin: 25px 25px 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* รายละเอียดโปรโมชั่น */
+.promote-caption p {
+    margin: 8px 25px;      
+    font-size: 16px;
+    line-height: 1.8;      
+    color: #555;
+    text-align: center;   
+}
+
+/* =========================
+   ปุ่ม
+========================= */
+
+.learn-more-btn {
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+
+    width: 45%;
+    max-width: 320px;
+    min-width: 240px;
+    height: 52px;              
+
+    margin: 25px auto 30px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: orange;
+    color: #fff;
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;           
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.learn-more-btn:hover {
+    background: #db7a0a;
+}
+
+/* =========================
+   สีหัวข้อแต่ละเทศกาล
+========================= */
+
+.promote-caption:nth-child(1) h2{
+    color:#ff7518;
+}
+
+.promote-caption:nth-child(2) h2{
+    color:#e75480;
+}
+
+.promote-caption:nth-child(3) h2{
+    color:#008000;
+}
+
+/* =========================
+   Contact
+========================= */
+
+.team{
+
+    margin-top:70px;
+    padding:70px 0;
+
+    background:#ffffff;
+
+}
+
+.section-header h2{
+
+    font-size:42px;
+    font-weight:bold;
+
+    color:#000000;
+
+    margin-bottom:20px;
+
+}
+
+.section-header p{
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    color: #555;
+}
+
+/* =========================
+   Team Card
+========================= */
+
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+    margin-top:30px;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card-body {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;
+}
+
+.card-title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+.card-text {
+    margin: 0;
+
+    font-size: 17px;
+    color: #666;
+
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+
+    margin-top:60px;
+
+    background:#222;
+
+    padding:20px;
+
+}
+
+.highlighted-text{
+
+    color:#fff;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin:0;
+
+    text-align:center;
+
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+
+    .promote-caption img {
+        height: 220px;
+    }
+
+    .promote-caption h2 {
+        font-size: 22px;
+    }
+
+    .promote-caption p {
+        font-size: 16px;
+    }
+
+     .learn-more-btn {
+        width: 80%;
+        max-width: none;
+        min-width: 0;
+        height: 50px;
+    }
+}
