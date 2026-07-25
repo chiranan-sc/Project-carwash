@@ -8,6 +8,10 @@ const View = () => {
   const [bookings, setBookings] = useState([]);
   const navigate = useNavigate(); // ใช้ navigate เพื่อเปลี่ยนหน้า
 
+  // แสดงที่ละ 10 รายการ หน้าที่...
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
   useEffect(() => {
     const storedBookings = JSON.parse(localStorage.getItem("bookings")) || [];
 
@@ -34,6 +38,13 @@ const View = () => {
     localStorage.setItem("currentBooking", JSON.stringify(booking));
     navigate("/deposit"); // นำผู้ใช้ไปที่หน้า Deposit
   };
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+  const currentBookings = bookings.slice(indexOfFirstItem, indexOfLastItem);
+
+  const totalPages = Math.ceil(bookings.length / itemsPerPage);
 
   return (
     <div className="view">
@@ -62,7 +73,8 @@ const View = () => {
               </tr>
             </thead>
             <tbody>
-              {bookings.map((booking, index) => (
+              {/* {bookings.map((booking, index) => ( */}
+              {currentBookings.map((booking, index) => (
                 <tr key={index}>
                   <td>{booking.firstname}</td>
                   <td>{booking.lastname}</td>
@@ -84,6 +96,26 @@ const View = () => {
               ))}
             </tbody>
           </table>
+
+          <div className="pagination">
+            <button
+              onClick={() => setCurrentPage(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              กลับ
+            </button>
+
+            <span>
+              หน้าที่ {currentPage} / {totalPages}
+            </span>
+
+            <button
+              onClick={() => setCurrentPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              ถัดไป
+            </button>
+          </div>
         </div>
       )}
     </div>

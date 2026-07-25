@@ -1,11 +1,16 @@
+
+.booking-page {
+    min-height: 100vh;
+    background: #f4f6f9;
+    padding: 100px 30px 30px;
+}
+
 .booking-form {
     width: 90%;
     max-width: 700px;
-    margin: 50px auto;
+    margin: 0px auto;
     padding: 40px;
-
     background: #fff;
-
     border-radius: 18px;
     box-shadow: 0 5px 18px rgba(0,0,0,.12);
 }

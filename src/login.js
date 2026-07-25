@@ -37,7 +37,7 @@ const Login = () => {
         <h1>เข้าสู่ระบบ</h1>
 
         <div className="usernameform">
-          <label htmlFor="username">ชื่อแอดมิน:</label>
+          <label htmlFor="username">ชื่อผู้ใช้งาน:</label>
           <input
             type="text"
             id="username"

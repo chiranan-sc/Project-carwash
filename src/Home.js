@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 //ติดตั้งไอคอน Bootstrap
 import "./Home.css";
 
+
 // ฟังก์ชัน Home
 function Home() {
   const navigate = useNavigate();
@@ -183,9 +184,8 @@ const Footer = () => {
 // คอมโพเนนต์หลักที่รวม Home และ TeamSection
 function Homepage() {
   return (
-    <div>
+    <div className="homepage">
       <Home />
-
       <TeamSection />
       <Footer />
     </div>

@@ -1,3 +1,5 @@
+/* Project-carwash\src\dashboard.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +9,16 @@
 .dashboard {
   min-height: 100vh;
   background: #f4f6f9;
-  padding: 30px;
+  padding: 100px 30px 30px;
 }
 
 .dashboard h1 {
   text-align: center;
   margin-bottom: 25px;
-  color: #333;
-  font-size: 2rem;
+  color: #000000;
+  font-size: 40px;
+  font-weight: bold;
+
 }
 
 .dashboard p {
@@ -139,6 +143,46 @@
   background: #f8d7da;
   color: #721c24;
 }
+
+
+/* ปุ่ม กลับ หน้าที่... ปุ่มถัดไป */
+/* Pagination */
+
+.pagination {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pagination button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #ff9800;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #f57c00;
+}
+
+.pagination button:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
 
 /* Responsive */
 @media (max-width: 1200px) {

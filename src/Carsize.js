@@ -75,39 +75,41 @@ function Carsize() {
   ];
 
   return (
-    <div className="Carsize">
-      <h1>ขนาดรถ</h1>
+    <div className="carsize-page">
+      <div className="Carsize">
+        <h1>ขนาดรถ</h1>
 
-      {carSizes.map((car) => (
-        <div key={car.size} className="size-section">
-          <img
-            className="piccarsize"
-            src={car.image}
-            alt={`Size ${car.size}`}
-          />
+        {carSizes.map((car) => (
+          <div key={car.size} className="size-section">
+            <img
+              className="piccarsize"
+              src={car.image}
+              alt={`Size ${car.size}`}
+            />
 
-          <div className="size-content">
-            <h2>
-              Size: {car.size} ({car.name})
-            </h2>
+            <div className="size-content">
+              <h2>
+                Size: {car.size} ({car.name})
+              </h2>
 
-            <p>ตัวอย่างรถ:</p>
+              <p>ตัวอย่างรถ:</p>
 
-            <ul>
-              {car.cars.map((carName, index) => (
-                <li key={index}>{carName}</li>
-              ))}
-            </ul>
+              <ul>
+                {car.cars.map((carName, index) => (
+                  <li key={index}>{carName}</li>
+                ))}
+              </ul>
 
-            <button
-              className="carbutton"
-              onClick={() => handleCarSizeSelection(car.size)}
-            >
-              เลือกขนาดรถ
-            </button>
+              <button
+                className="carbutton"
+                onClick={() => handleCarSizeSelection(car.size)}
+              >
+                เลือกขนาดรถ
+              </button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,9 +1,18 @@
+/* src\Home.css */
+
 /* =========================
    Home
 ========================= */
 
+.homepage {
+    width: 100%;
+    min-height: 100vh;
+    background: #f4f6f9;
+    overflow-x: hidden;
+}
+
 body {
-    background-color: #f8f9fa;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -74,7 +83,6 @@ body {
 /* =========================
    ปุ่ม
 ========================= */
-
 .learn-more-btn {
     display: flex;
     justify-content: center;   
@@ -86,7 +94,6 @@ body {
     height: 52px;              
 
     margin: 25px auto 30px;
-
     border: none;
     border-radius: 10px;
 
@@ -108,7 +115,6 @@ body {
 /* =========================
    สีหัวข้อแต่ละเทศกาล
 ========================= */
-
 .promote-caption:nth-child(1) h2{
     color:#ff7518;
 }
@@ -124,14 +130,10 @@ body {
 /* =========================
    Contact
 ========================= */
-
 .team{
-
     margin-top:70px;
     padding:70px 0;
-
-    background:#ffffff;
-
+    background: #eef2f5;
 }
 
 .section-header h2{
@@ -156,30 +158,22 @@ body {
 /* =========================
    Team Card
 ========================= */
-
 .card{
-
     border:none;
-
     border-radius:15px;
-
     box-shadow:0 8px 20px rgba(0,0,0,.1);
-
     transition:.3s;
-
     margin-top:30px;
 
 }
 
 .card:hover{
-
     transform:translateY(-8px);
 
 }
 
 .card-body {
     padding: 30px;
-
     display: flex;
     flex-direction: column;
     align-items: center;   
@@ -192,17 +186,14 @@ body {
 
     font-size: 22px;
     font-weight: bold;
-
     text-align: center;
 }
 
 
 .card-text {
     margin: 0;
-
     font-size: 17px;
     color: #666;
-
     text-align: center;
     line-height: 1.6;
 }
@@ -210,29 +201,18 @@ body {
 /* =========================
    Footer
 ========================= */
-
 footer{
-
     margin-top:60px;
-
     background:#222;
-
     padding:20px;
-
 }
 
 .highlighted-text{
-
     color:#fff;
-
     font-size:20px;
-
     font-weight:bold;
-
     margin:0;
-
     text-align:center;
-
 }
 
 /* =========================

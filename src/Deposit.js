@@ -36,10 +36,10 @@ const Deposit = () => {
     };
 
     const currentIndex = existingData.findIndex(
-       (item) => item.id === updatedBooking.id
-        // item.phone === booking.phone &&
-        // item.date === booking.date &&
-        // item.time === booking.time,
+      (item) => item.id === updatedBooking.id,
+      // item.phone === booking.phone &&
+      // item.date === booking.date &&
+      // item.time === booking.time,
     );
 
     if (currentIndex >= 0) {
@@ -56,45 +56,48 @@ const Deposit = () => {
   };
 
   return (
-    <div className="deposit">
-      <h1>ชำระค่ามัดจำ</h1>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzbNSlKQ9SUHX8Qgm8sqacyosJGlqY2Ou2ZUWSD5du15r9GNcxzfJN7o&s=10" />
-      <p>
-        <strong>ชื่อ:</strong> {booking.firstname} {booking.lastname}
-      </p>
+    <div className="deposit-page">
+      <div className="deposit">
+        <h1>ชำระค่ามัดจำ</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzbNSlKQ9SUHX8Qgm8sqacyosJGlqY2Ou2ZUWSD5du15r9GNcxzfJN7o&s=10" />
+        <p>
+          <strong>ชื่อ:</strong> {booking.firstname} {booking.lastname}
+        </p>
 
-      <p>
-        <strong>ป้ายทะเบียน:</strong> {booking.licensePlate}
-      </p>
+        <p>
+          <strong>ป้ายทะเบียน:</strong> {booking.licensePlate}
+        </p>
 
-      <p>
-        <strong>วันที่จอง:</strong> {booking.date}
-      </p>
+        <p>
+          <strong>วันที่จอง:</strong> {booking.date}
+        </p>
 
-      <p>
-        <strong>เวลาจอง:</strong> {booking.time}
-      </p>
+        <p>
+          <strong>เวลาจอง:</strong> {booking.time}
+        </p>
 
-      <p>
-        <strong>ราคาทั้งหมดของบริการ:</strong> {booking.totalPrice} บาท
-      </p>
+        <p>
+          <strong>ราคาทั้งหมดของบริการ:</strong> {booking.totalPrice} บาท
+        </p>
 
-      <p>
-        <strong>ค่ามัดจำ 50%:</strong>{" "}
-        {booking.totalPrice ? (booking.totalPrice * 0.5).toFixed(2) : "N/A"} บาท
-      </p>
+        <p>
+          <strong>ค่ามัดจำ 50%:</strong>{" "}
+          {booking.totalPrice ? (booking.totalPrice * 0.5).toFixed(2) : "N/A"}{" "}
+          บาท
+        </p>
 
-      {/* เปลี่ยนไปที่หน้า Booking สำหรับการชำระเงิน */}
-      <div className="button-group">
-        <button
-          onClick={() => {
-            localStorage.setItem("currentBooking", JSON.stringify(booking));
-            navigate("/booking");
-          }}
-        >
-          ยกเลิก
-        </button>
-        <button onClick={handleCancel}>ยืนยัน</button>
+        {/* เปลี่ยนไปที่หน้า Booking สำหรับการชำระเงิน */}
+        <div className="button-group">
+          <button
+            onClick={() => {
+              localStorage.setItem("currentBooking", JSON.stringify(booking));
+              navigate("/booking");
+            }}
+          >
+            ยกเลิก
+          </button>
+          <button onClick={handleCancel}>ยืนยัน</button>
+        </div>
       </div>
     </div>
   );

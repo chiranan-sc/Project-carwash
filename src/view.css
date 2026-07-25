@@ -11,14 +11,15 @@
 .view {
     min-height: 100vh;
     background: #f4f6f9;
-    padding: 30px;
+    padding: 100px 30px 30px;
 }
 
 .view h1 {
     text-align: center;
-    margin-bottom: 25px;
-    color: #333;
-    font-size: 2rem;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 35px;
 }
 
 /* =========================
@@ -102,6 +103,45 @@ table {
     margin-top: 50px;
 }
 
+/* ปุ่ม กลับ หน้าที่... ปุ่มถัดไป */
+/* Pagination */
+
+.pagination {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pagination button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #ff9800;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #f57c00;
+}
+
+.pagination button:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+
 /* =========================
    Responsive
 ========================= */
@@ -124,7 +164,7 @@ table {
     }
 
     .view h1 {
-        font-size: 26px;
+        font-size: 40px;
     }
 
     .view table {

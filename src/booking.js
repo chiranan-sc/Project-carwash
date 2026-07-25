@@ -226,110 +226,112 @@ function Booking() {
   };
 
   return (
-    <div className="booking-form">
-      <h1>จองบริการ</h1>
-      <form onSubmit={handleSubmit}>
-        <label>ชื่อ:</label>
-        <input
-          type="text"
-          name="firstname"
-          value={formData.firstname}
-          onChange={handleChange}
-        />
+    <div className="booking-page">
+      <div className="booking-form">
+        <h1>จองบริการ</h1>
+        <form onSubmit={handleSubmit}>
+          <label>ชื่อ:</label>
+          <input
+            type="text"
+            name="firstname"
+            value={formData.firstname}
+            onChange={handleChange}
+          />
 
-        <label>นามสกุล:</label>
-        <input
-          type="text"
-          name="lastname"
-          value={formData.lastname}
-          onChange={handleChange}
-        />
+          <label>นามสกุล:</label>
+          <input
+            type="text"
+            name="lastname"
+            value={formData.lastname}
+            onChange={handleChange}
+          />
 
-        <label>เบอร์โทรศัพท์:</label>
-        <input
-          type="tel"
-          name="phone"
-          value={formData.phone}
-          maxLength={10}
-          onChange={(e) => {
-            const value = e.target.value.replace(/\D/g, ""); // รับเฉพาะตัวเลข
-            setFormData((prev) => ({
-              ...prev,
-              phone: value,
-            }));
-          }}
-        />
-
-        <label>ประเภทบริการ:</label>
-        <input
-          type="text"
-          name="serviceType"
-          value={formData.serviceType}
-          readOnly
-        />
-
-        <label>ขนาดรถ:</label>
-        <input type="text" name="carSize" value={formData.carSize} readOnly />
-
-        <label>วันที่ & เวลา:</label>
-
-        <div className="datetime-group">
-          <div className="datepicker-wrapper">
-            <DatePicker
-              selected={formData.date ? new Date(formData.date) : null}
-              onChange={(date) =>
-                setFormData((prev) => ({
-                  ...prev,
-                  date: date ? date.toISOString().split("T")[0] : "",
-                }))
-              }
-              minDate={new Date()}
-              dateFormat="yyyy/MM/dd"
-              placeholderText="ปี/เดือน/วัน"
-              className="react-datepicker-input"
-              showMonthDropdown
-              showYearDropdown
-              dropdownMode="select"
-              onKeyDown={(e) => e.preventDefault()}
-            />
-            <FaCalendarAlt className="calendar-icon" />
-          </div>
-
-          <Select
-            className="time-select"
-            classNamePrefix="react-select"
-            name="time"
-            options={timeOptions}
-            isSearchable={false}
-            value={
-              formData.time
-                ? { value: formData.time, label: formData.time }
-                : null
-            }
-            onChange={(selectedOption) =>
+          <label>เบอร์โทรศัพท์:</label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            maxLength={10}
+            onChange={(e) => {
+              const value = e.target.value.replace(/\D/g, ""); // รับเฉพาะตัวเลข
               setFormData((prev) => ({
                 ...prev,
-                time: selectedOption ? selectedOption.value : "",
-              }))
-            }
-            placeholder="เลือกเวลา"
+                phone: value,
+              }));
+            }}
           />
-        </div>
 
-        <label>ทะเบียนรถ:</label>
-        <input
-          type="text"
-          name="licensePlate"
-          value={formData.licensePlate}
-          onChange={handleChange}
-        />
+          <label>ประเภทบริการ:</label>
+          <input
+            type="text"
+            name="serviceType"
+            value={formData.serviceType}
+            readOnly
+          />
 
-        <div className="total-price">
-          <strong>ราคาทั้งหมด:</strong> {totalPrice} บาท
-        </div>
+          <label>ขนาดรถ:</label>
+          <input type="text" name="carSize" value={formData.carSize} readOnly />
 
-        <button type="submit">ชำระค่ามัดจำ</button>
-      </form>
+          <label>วันที่ & เวลา:</label>
+
+          <div className="datetime-group">
+            <div className="datepicker-wrapper">
+              <DatePicker
+                selected={formData.date ? new Date(formData.date) : null}
+                onChange={(date) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    date: date ? date.toISOString().split("T")[0] : "",
+                  }))
+                }
+                minDate={new Date()}
+                dateFormat="yyyy/MM/dd"
+                placeholderText="ปี/เดือน/วัน"
+                className="react-datepicker-input"
+                showMonthDropdown
+                showYearDropdown
+                dropdownMode="select"
+                onKeyDown={(e) => e.preventDefault()}
+              />
+              <FaCalendarAlt className="calendar-icon" />
+            </div>
+
+            <Select
+              className="time-select"
+              classNamePrefix="react-select"
+              name="time"
+              options={timeOptions}
+              isSearchable={false}
+              value={
+                formData.time
+                  ? { value: formData.time, label: formData.time }
+                  : null
+              }
+              onChange={(selectedOption) =>
+                setFormData((prev) => ({
+                  ...prev,
+                  time: selectedOption ? selectedOption.value : "",
+                }))
+              }
+              placeholder="เลือกเวลา"
+            />
+          </div>
+
+          <label>ทะเบียนรถ:</label>
+          <input
+            type="text"
+            name="licensePlate"
+            value={formData.licensePlate}
+            onChange={handleChange}
+          />
+
+          <div className="total-price">
+            <strong>ราคาทั้งหมด:</strong> {totalPrice} บาท
+          </div>
+
+          <button type="submit">ชำระค่ามัดจำ</button>
+        </form>
+      </div>
     </div>
   );
 }

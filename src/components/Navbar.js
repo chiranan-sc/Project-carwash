@@ -16,6 +16,7 @@ function Navbar() {
         <Link to="/view">View</Link>
         <Link to="/Service">Service</Link>
         <Link to="/login">Login</Link>
+        {/* <Link to="/Signup">Signup</Link> */}
       </div>
     </nav>
   );

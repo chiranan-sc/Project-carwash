@@ -10,7 +10,7 @@ import Home from "./Home";
 import Service from "./Service";
 import Carsize from "./Carsize";
 import Login from "./login";
-import Signup from "./Signup";
+// import Signup from "./Signup";
 import Booking from "./booking";
 import Dashboard from "./dashboard";
 import View from "./view";
@@ -42,7 +42,7 @@ function App() {
         <Route path="/Service" element={<Service />} />
         
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup setUser={setUser} />} />
+        {/* <Route path="/signup" element={<Signup setUser={setUser} />} /> */}
 
         <Route path="/booking" element={<Booking />} />
         <Route path="/dashboard" element={<Dashboard />} />
